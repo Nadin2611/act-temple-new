@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vanilla-app-template/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla App Template</title>
+    
+    <script type="module" crossorigin src="/vanilla-app-template/assets/index-7433af3d.js"></script>
+    <link rel="stylesheet" href="/vanilla-app-template/assets/index-249b87e8.css">
+  </head>
+  <body>
+    <header class="header"></header>
+
+    <section class="section-print">
+      <h1 class="section-title">
+        <span>Акт</span> здачi - приймання наданих послуг
+      </h1>
+      <h2 class="section-subtitle">Шаблон</h2>
+    </section>
+
+    <h1 class="form-title">Форма для створення акту</h1>
+<form id="actForm">
+  <label for="executor">Виконавець:</label>
+  <select id="executor" name="executor" required title="Оберіть виконавця">
+    <option value="">Виберіть виконавця</option>
+  </select>
+
+  <label for="act-number">Номер акту:</label>
+  <input type="text" id="act-number" name="act-number" required />
+
+  <label for="act-date">Дата акту:</label>
+  <input type="date" id="act-date" name="act-date" required />
+
+  <label for="act-place">Місце укладення:</label>
+  <select id="act-place" name="act-place" required>
+    <option value="">Виберіть місце укладення</option>
+    <option value="Місце 1" selected>м. Львів</option>
+    <option value="Місце 2"></option>
+    <option value="Місце 3"></option>
+  </select>
+
+  <label for="planning-period">Період планування</label>
+  <input
+    type="text"
+    id="planning-period"
+    name="planning-period"
+    required
+    title="Введіть період, за який розроблялось планування (місяць)"
+  />
+
+  <label for="group-classes">Гурткові заняття</label>
+  <input
+    type="number"
+    id="group-classes"
+    name="group-classes"
+    title="Введіть кількість гурткових занять (цифрове значення)"
+    required
+  />
+
+  <label for="one-time-activities">Одноразові активності</label>
+  <input
+    type="number"
+    id="one-time-activities"
+    name="one-time-activities"
+    title="Введіть кількість одноразових активностей (цифрове значення)"
+  />
+
+  <label for="number-of-children">Кількість залучених осіб</label>
+  <input
+    type="number"
+    id="number-of-children"
+    name="number-of-children"
+    title="Введіть кількість залучених осіб (цифрове значення)"
+    required
+  />
+
+  <label for="unique-person">З них унікальних</label>
+  <input
+    type="number"
+    id="unique-person"
+    name="unique-person"
+    title="Введіть кількість унікальних осіб (цифрове значення)"
+    required
+  />
+
+  <fieldset>
+    <legend>Період надання послуг</legend>
+    <label for="period-start">Початкова дата:</label>
+    <input
+      type="date"
+      id="period-start"
+      name="period-start"
+      required
+      title="Оберіть початкову дату періоду, за який складається акт"
+    />
+
+    <label for="period-end">Кінцева дата:</label>
+    <input
+      type="date"
+      id="period-end"
+      name="period-end"
+      required
+      title="Оберіть кінцеву дату періоду, за який складається акт"
+    />
+  </fieldset>
+
+  <label for="service-cost">Вартість послуг</label>
+  <input
+    type="number"
+    id="service-cost"
+    name="service-cost"
+    required
+    title="Введіть вартість наданих послуг"
+  />
+
+  <button type="submit" id="print-button">Друкувати акт</button>
+</form>
+
+    <div class="print-act-text"></div>
+    
+  </body>
+</html>
